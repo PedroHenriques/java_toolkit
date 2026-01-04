@@ -1,0 +1,62 @@
+# --------------------------------------------------
+# Build outputs (Maven / Gradle)
+# --------------------------------------------------
+**/target/
+**/build/
+
+# --------------------------------------------------
+# Test & coverage artifacts
+# --------------------------------------------------
+coverageReport/
+**/jacoco.exec
+**/target/site/jacoco/
+**/surefire-reports/
+**/failsafe-reports/
+
+# --------------------------------------------------
+# Maven wrapper & local cache
+# --------------------------------------------------
+.mvn/wrapper/maven-wrapper.jar
+**/.mvn/
+**/.m2/
+
+# --------------------------------------------------
+# Logs
+# --------------------------------------------------
+*.log
+
+# --------------------------------------------------
+# IDEs
+# --------------------------------------------------
+
+## IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+## Eclipse / STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache/
+
+## NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+## VS Code
+.vscode/
+
+# --------------------------------------------------
+# OS / editor junk
+# --------------------------------------------------
+.DS_Store
+Thumbs.db
+*~

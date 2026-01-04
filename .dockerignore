@@ -1,0 +1,38 @@
+# VCS
+**/.git/
+**/.gitignore
+
+# Maven
+**/target/
+**/.mvn/
+**/mvnw
+**/mvnw.cmd
+**/.m2/
+
+# Gradle (future-proof)
+**/.gradle/
+**/build/
+
+# IDEs
+**/.idea/
+**/.vscode/
+**/*.iml
+
+# OS / editor junk
+**/.DS_Store
+**/Thumbs.db
+**/*~
+
+# Test / coverage artifacts
+**/coverageReport/
+**/jacoco.exec
+**/target/site/jacoco/
+**/surefire-reports/
+**/failsafe-reports/
+
+# Logs
+**/*.log
+
+# Temp / cache
+**/tmp/
+**/temp/
