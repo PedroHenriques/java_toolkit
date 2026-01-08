@@ -5,19 +5,20 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.pjh</groupId>
-  <artifactId>java-ms-template-parent</artifactId>
+  <artifactId>java-toolkit-parent</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>Java Microservice Template Parent</name>
+  <name>Java Toolkit Parent</name>
 
   <!-- Centralized Java & Spring versions -->
   <properties>
     <java.version>21</java.version>
+    <maven.compiler.release>${java.version}</maven.compiler.release>
+
     <spring.boot.version>3.3.0</spring.boot.version>
-    <maven.compiler.source>${java.version}</maven.compiler.source>
-    <maven.compiler.target>${java.version}</maven.compiler.target>
   </properties>
+
 
   <!-- Dependency management: Spring Boot BOM -->
   <dependencyManagement>
@@ -92,6 +93,6 @@
 
   <!-- All modules in this template -->
   <modules>
-    <module>src/Api</module>
+    <module>setup/local/Tester</module>
   </modules>
 </project>

@@ -1,15 +1,17 @@
 services:
-  api:
-    image: ${PROJECT_NAME:-myapp}_api:${IMAGE_TAG:-latest}
+  tester:
+    image: ${PROJECT_NAME:-myapp}_tester:${IMAGE_TAG:-latest}
     build:
       context: ../../
-      dockerfile: ./src/Api/Dockerfile
-    container_name: "api"
+      dockerfile: ./setup/local/Tester/Dockerfile
+    container_name: "tester"
     restart: on-failure
     depends_on:
       api_db:
         condition: service_healthy
       api_redis:
+        condition: service_healthy
+      schema-registry:
         condition: service_healthy
     environment:
       - DEPLOYMENT_ENV=local
