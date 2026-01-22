@@ -3,8 +3,8 @@ FROM maven:3.9-eclipse-temurin-21 AS build
 WORKDIR /source
 COPY pom.xml .
 COPY src/Api/pom.xml src/Api/pom.xml
-COPY src src
-RUN mvn -pl src/Api clean package spring-boot:repackage -DskipTests
+COPY src/Api src/Api
+RUN mvn -B -f src/Api/pom.xml clean package -DskipTests
 
 # Runtime stage
 FROM eclipse-temurin:21-jre
