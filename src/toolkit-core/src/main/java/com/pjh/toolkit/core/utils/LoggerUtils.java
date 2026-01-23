@@ -79,10 +79,10 @@ public final class LoggerUtils {
     LogRecordExporter combinedLogs = LogRecordExporter.composite(consoleLogs, otlpLogs);
 
     LogRecordProcessor logsProcessor = (exporterMode == ExporterMode.SYNC)
-        ? SimpleLogRecordProcessor.create(combinedLogs)
-        : BatchLogRecordProcessor.builder(combinedLogs)
-          .setScheduleDelay(Duration.ofMillis(800))
-          .build();
+      ? SimpleLogRecordProcessor.create(combinedLogs)
+      : BatchLogRecordProcessor.builder(combinedLogs)
+        .setScheduleDelay(Duration.ofMillis(800))
+        .build();
 
 
     SdkLoggerProvider loggerProvider = SdkLoggerProvider.builder()
