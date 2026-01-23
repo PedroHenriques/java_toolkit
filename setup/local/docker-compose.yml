@@ -20,6 +20,13 @@ services:
       - REDIS_CON_STR=api_redis:6379
       - KAFKA_SCHEMA_REGISTRY_URL=http://schema-registry:8081
       - KAFKA_CON_STR=broker:29092
+      - SERVICE_NAME=tester
+      - SERVICE_VERSION=asf786
+      - PROJECT_NAME=toolkit_tester
+      - LOG_LEVEL=information
+      - LOG_DESTINATION_URI=http://otel_collector:4317
+      - EXPORTER_MODE=sync
+      - OTEL_RESOURCE_ATTRIBUTES=team=tester,infra=aks
     ports:
       - ${API_PORT:-10000}:10000
     networks:

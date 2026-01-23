@@ -4,7 +4,9 @@ WORKDIR /source
 COPY pom.xml .
 COPY setup/local/Tester/pom.xml setup/local/Tester/pom.xml
 COPY setup/local/Tester setup/local/Tester
-RUN mvn -B -f setup/local/Tester/pom.xml clean package -DskipTests
+COPY src/toolkit-core/pom.xml src/toolkit-core/pom.xml
+COPY src/toolkit-core src/toolkit-core
+RUN mvn -B -f pom.xml -pl setup/local/Tester -am clean package -DskipTests
 
 # Runtime stage
 FROM eclipse-temurin:21-jre
