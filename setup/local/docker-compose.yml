@@ -27,6 +27,9 @@ services:
       - LOG_DESTINATION_URI=http://otel_collector:4317
       - EXPORTER_MODE=sync
       - OTEL_RESOURCE_ATTRIBUTES=team=tester,infra=aks
+      - LD_ENV_SDK_KEY=${LD_ENV_SDK_KEY}
+      - LD_CONTEXT_API_KEY=${LD_CONTEXT_API_KEY}
+      - LD_CONTEXT_NAME=CTT .Net Toolkit - DEV
     ports:
       - ${API_PORT:-10000}:10000
     networks:
