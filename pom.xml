@@ -25,6 +25,8 @@
     <otel.version>1.49.0</otel.version>
     <otel.instrumentation.version>2.24.0</otel.instrumentation.version>
 
+    <launchdarkly.server.version>7.4.0</launchdarkly.server.version>
+
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -58,6 +60,12 @@
         <version>${otel.instrumentation.version}</version>
         <type>pom</type>
         <scope>import</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>com.launchdarkly</groupId>
+        <artifactId>launchdarkly-java-server-sdk</artifactId>
+        <version>${launchdarkly.server.version}</version>
       </dependency>
 
       <dependency>
