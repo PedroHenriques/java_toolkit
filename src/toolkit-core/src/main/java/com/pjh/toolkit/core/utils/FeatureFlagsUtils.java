@@ -5,7 +5,7 @@ import java.time.Duration;
 import com.launchdarkly.sdk.LDContext;
 import com.launchdarkly.sdk.server.LDClient;
 import com.launchdarkly.sdk.server.LDConfig;
-import com.pjh.toolkit.core.logging.ToolkitLogger;
+import com.pjh.toolkit.core.logging.ILogger;
 import com.pjh.toolkit.core.types.EnvNames;
 import com.pjh.toolkit.core.types.FeatureFlagsInputs;
 
@@ -17,7 +17,7 @@ public final class FeatureFlagsUtils {
       String contextKey,
       String contextName,
       EnvNames envName,
-      ToolkitLogger logger // can be null if you want
+      ILogger logger
   ) {
     LDConfig config = new LDConfig.Builder()
         .startWait(Duration.ofSeconds(5))

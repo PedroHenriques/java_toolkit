@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import com.launchdarkly.sdk.server.LDClient;
 import com.launchdarkly.sdk.server.interfaces.FlagValueChangeEvent;
 import com.launchdarkly.sdk.server.interfaces.FlagValueChangeListener;
+import com.pjh.toolkit.core.logging.ILogger;
 import com.pjh.toolkit.core.logging.MinLogLevel;
 import com.pjh.toolkit.core.logging.ToolkitLogger;
 import com.pjh.toolkit.core.types.FeatureFlagsInputs;
@@ -49,7 +50,7 @@ public class FeatureFlags implements IFeatureFlags {
 
         if (handler != null) handler.accept(ev);
 
-        ToolkitLogger logger = inputs.getLogger();
+        ILogger logger = inputs.getLogger();
         if (logger != null) {
           logger.log(
             MinLogLevel.INFORMATION,

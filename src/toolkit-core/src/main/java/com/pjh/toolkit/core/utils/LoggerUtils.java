@@ -32,7 +32,6 @@ import io.opentelemetry.sdk.trace.export.SpanExporter;
 import io.opentelemetry.semconv.ServiceAttributes;
 
 public final class LoggerUtils {
-
   private LoggerUtils() {}
 
   public enum ExporterMode {
