@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "My Value",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "prop1": {
+      "oneOf": [
+        {
+          "type": "null",
+          "title": "Not included"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "prop2": {
+      "oneOf": [
+        {
+          "type": "null",
+          "title": "Not included"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "prop3": {
+      "type": "boolean"
+    },
+    "prop4": {
+      "type": "number"
+    },
+    "prop5": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "prop3",
+    "prop4",
+    "prop5"
+  ]
+}

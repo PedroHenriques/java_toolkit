@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "MyKey",
+  "namespace": "Tester.Services",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-package com.pjh.tester;
+package com.pjh.tester.models;
 
 import java.util.ArrayList;
 import java.util.List;
