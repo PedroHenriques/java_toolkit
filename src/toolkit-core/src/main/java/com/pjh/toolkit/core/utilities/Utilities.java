@@ -15,17 +15,6 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Utility helpers for JSON-path-like navigation over POJOs.
- *
- * Supported path syntax:
- * - Dot navigation: "a.b.c"
- * - List/array index: "items[0]", "items[2].product.name"
- *
- * Behavior (mirrors your .NET implementation):
- * - getByPath: returns null when any segment can't be resolved
- * - addToPath: creates intermediate objects/lists when possible; returns true if set succeeded, false otherwise
- */
 public final class Utilities {
 
   private Utilities() {}
